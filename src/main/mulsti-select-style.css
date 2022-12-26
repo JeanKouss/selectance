@@ -1,0 +1,82 @@
+.multiselector-subst * {
+    box-sizing: border-box;
+}
+
+.multiselector-subst {
+    --multiselector-subst-max-width : 500px;
+    --multiselector-subst-p-height : 2rem;
+    --multiselector-subst-ul-max-height : 10rem;
+}
+
+.multiselector-subst {
+    max-width: 500px;
+    max-width: var(--multiselector-subst-max-width);
+    position: relative;
+}
+
+.multiselector-subst p {
+    height: var(--multiselector-subst-p-height);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    cursor: pointer;
+}
+
+.multiselector-subst.active p {
+    border: 2px solid black;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgb(235, 235, 235);
+    user-select: none;
+}
+
+.multiselector-subst ul {
+    position: absolute;
+    top: var(--multiselector-subst-p-height);
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding: 0 0.2rem;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    background-color: white;
+    max-height: var(--multiselector-subst-ul-max-height);
+    overflow-y: auto;
+}
+
+.multiselector-subst.active ul {
+    display: block;
+}
+
+.multiselector-subst li {
+    user-select: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.multiselector-subst li span {
+    display: block;
+    height: 1em;
+    width: 1em;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.multiselector-subst li.selected span {
+    background-color: blue;
+}
