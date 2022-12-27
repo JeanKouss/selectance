@@ -11,9 +11,10 @@ class Multiselector {
         this.elementId = multiselectorElement.id;
         this.elementName = multiselectorElement.name;
         this.initSubstitutor();
+        // this.applySelectStyle();
         this.disableSelectElement();
         this.addOptionsToSubstitutor();
-        this.renderChanges();
+        this.renderChoicesChanges();
     }
 
     initSubstitutor() {
@@ -27,6 +28,7 @@ class Multiselector {
         this.substitutorDiv.appendChild(this.substitutorInput);
         this.substitutorSelectionDisplayer = document.createElement("p");
         this.substitutorSelectionDisplayer.setAttribute("tabindex", 0);
+        this.substitutorSelectionDisplayer.classList.add("select-subst");
         this.substitutorSelectionDisplayer.addEventListener("click", (e) => {
             this.substitutorDiv.classList.toggle("active");
         });
@@ -35,6 +37,15 @@ class Multiselector {
         
         this.selectElement.insertAdjacentElement('afterend', this.substitutorDiv);
         this.selectElement.style.display = "none";
+    }
+
+    applySelectStyle() {
+        console.log(this.selectElement.style);
+        this.substitutorDiv.style.width = this.selectElement.s;
+        this.substitutorDiv.style.maxWidth = this.selectElement.style.maxWidth;
+        this.substitutorSelectionDisplayer.style.border = this.selectElement.style.border;
+        this.substitutorDiv.style.borderRadius = this.selectElement.style.borderRadius;
+        console.log("hey");
     }
 
     disableSelectElement() {
@@ -56,7 +67,7 @@ class Multiselector {
         this.substitutorDiv.querySelector("ul").appendChild(optionSubstitutor);
         optionSubstitutor.addEventListener("click", (e) => {
             this.toogleOptionSelection(value, text);
-            this.renderChanges();
+            this.renderChoicesChanges();
         });
         if(selected) {
             this.selectedOptions[value] = text;
@@ -71,7 +82,7 @@ class Multiselector {
         }
     }
 
-    renderChanges() {
+    renderChoicesChanges() {
         let selectedValues = [];
         let selectedTexts = [];
         for (let value in this.selectedOptions) {

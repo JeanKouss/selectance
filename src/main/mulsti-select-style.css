@@ -4,17 +4,22 @@
 
 .multiselector-subst {
     --multiselector-subst-max-width : 500px;
+    --multiselector-subst-min-width : 10rem;
     --multiselector-subst-p-height : 2rem;
-    --multiselector-subst-ul-max-height : 10rem;
+    --multiselector-subst-ul-max-height : 20rem;
+    --multiselector-subst-ul-z-index : 5000;
 }
 
 .multiselector-subst {
+    position: relative;
+    display: block;
     max-width: 500px;
     max-width: var(--multiselector-subst-max-width);
-    position: relative;
+    min-width: 10rem;
+    min-width: var(--multiselector-subst-min-width);
 }
 
-.multiselector-subst p {
+.multiselector-subst .select-subst {
     height: var(--multiselector-subst-p-height);
     border: 1px solid black;
     border-radius: 5px;
@@ -25,13 +30,11 @@
     align-items: flex-start;
     margin: 0;
     cursor: pointer;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.multiselector-subst.active p {
-    border: 2px solid black;
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+.multiselector-subst.active .select-subst {
     background-color: rgb(235, 235, 235);
     user-select: none;
 }
@@ -55,6 +58,7 @@
 
 .multiselector-subst.active ul {
     display: block;
+    z-index: var(--multiselector-subst-ul-z-index);
 }
 
 .multiselector-subst li {
