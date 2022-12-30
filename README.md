@@ -3,87 +3,44 @@
 A backend and frontend friendly way to make multiple option selection in your HTML form. It does nearly the same thing as Select2, Selectize or Choices.js but is build in an easy to use way.
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)](Status)
-[![GitHub Issues](https://img.shields.io/github/issues/JeanKouss/html-select-multiple.svg)](https://github.com/JeanKouss/html-select-multiple/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/JeanKouss/html-select-multiple.svg)](https://github.com/JeanKouss/html-select-multiple/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/JeanKouss/selectance.svg)](https://github.com/JeanKouss/selectance/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/JeanKouss/selectance.svg)](https://github.com/JeanKouss/selectance/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 ## 📝 Table of Contents
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Selectance](#selectance)
+  - [📝 Table of Contents](#-table-of-contents)
+  - [🔍 About ](#-about-)
+  - [🏁 Getting Started ](#-getting-started-)
+  - [🔧 Running the tests ](#-running-the-tests-)
+  - [🎈 Usage ](#-usage-)
+  - [🎉 Acknowledgements ](#-acknowledgements-)
 
 ## 🔍 About <a id = "about"></a>
 
+Selectance gives you a way to make multiple options selection in HTML form. Here are some here are some reasons you should use it :
 
+- Easy to use : no JavaScript skill need,
+- Fast to implement : write the HTML code and let Selectance cares the rest for you,
+- Preselection support,
+- The submited values can be different from the text user see,
+- Full customisable style.
 
 ## 🏁 Getting Started <a id = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Steps to use it :
 
-### Prerequisites
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+1. Download sources from src/main
+2. Link soources
+3. Add class to HTML select elements that needs multiselect
 
 ## 🔧 Running the tests <a name = "tests"></a>
-Explain how to run the automated tests for this system.
 
-### Break down into end to end tests
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-Explain what these tests test and why
-
-```
-Give an example
-```
+links to tests.
 
 ## 🎈 Usage <a name="usage"></a>
 Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 - Hat tip to anyone whose code was used
