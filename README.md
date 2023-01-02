@@ -56,4 +56,4 @@ Steps to use it :
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-[Here](test/frruits.html) a is a quick view.
+To test it, you can download the repository and open test/fruits.html in you browser.
