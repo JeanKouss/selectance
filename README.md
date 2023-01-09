@@ -10,10 +10,11 @@ A backend and frontend friendly way to make multiple option selection in your HT
 ## 📝 Table of Contents
 
 - [Selectance](#selectance)
-	- [📝 Table of Contents](#-table-of-contents)
-	- [🔍 About ](#-about-)
-	- [🏁 Getting Started ](#-getting-started-)
-	- [🔧 Running the tests ](#-running-the-tests-)
+  - [📝 Table of Contents](#-table-of-contents)
+  - [🔍 About ](#-about-)
+  - [🏁 Getting Started ](#-getting-started-)
+  - [💄 Customizing the style ](#-customizing-the-style-)
+  - [🔧 Running the tests ](#-running-the-tests-)
 
 ## 🔍 About <a id = "about"></a>
 
@@ -53,6 +54,16 @@ Steps to use it :
 		<!-- Options -->
 	</select>
    ```
+
+## 💄 Customizing the style <a name = "customizing the style"></a>
+
+Selectance works by removing the basic select element and uses other generated elements instead. So it can be anoying to customize multiselectors style.
+
+Fortunately, there is a file [here](src/customization/selectance-custom_style.css) that will help you making the customization. In this file you will find the css selectors already writen and indications on the way to use them.
+
+You can use it alone to code yourself all the style or link it after linking the main style (selectance-style.css), to overwrite the main style.
+
+If you want to contribute by sharing you style customization, it will be great!
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
