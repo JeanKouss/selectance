@@ -11,7 +11,7 @@
 }
 
 .multiselector-subst {
-    position: relative;
+    position: relative !important;
     display: block;
     max-width: 500px;
     max-width: var(--multiselector-subst-max-width);
@@ -40,14 +40,14 @@
 }
 
 .multiselector-subst ul {
-    position: absolute;
-    top: var(--multiselector-subst-p-height);
-    display: none;
+    position: absolute !important;
+    top: 100%;
+    display: none !important;
     margin: 0;
     list-style: none;
     padding: 0 0.2rem;
     border: 2px solid black;
-    border-top: none;
+    /* border-top: none; */
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 100%;
@@ -57,7 +57,7 @@
 }
 
 .multiselector-subst.active ul {
-    display: block;
+    display: block !important;
     z-index: var(--multiselector-subst-ul-z-index);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .multiselector-subst li span {
-    display: block;
+    display: inline-block;
     height: 1em;
     width: 1em;
     border: 2px solid black;

@@ -46,7 +46,7 @@ Steps to use it :
     <script src="path/to/selectance-script.js"></script>
     ```
 
-3. Add class "multiselector" to HTML select elements that needs multiselect. 
+3. Add class "multiselector" to HTML select elements that needs multiselect.
    
    ```html
 	<select name="fruits" id="fruits" class="multiselector">
