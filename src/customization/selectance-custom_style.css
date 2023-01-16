@@ -24,25 +24,45 @@
     position: relative;
 }
 
-
 /* 
- * `.select-subst` is for the container that displays the selected options
- * and on which user clicks to display the list of options.
+ * This span elements are the selected options.
+ * `selected-items-div` is the container that display the selected elements
 */
-.multiselector-subst .select-subst {
-    height: 2rem;
-    border: 1px solid black;
-    cursor: pointer;
-    overflow-x: hidden;
+.multiselector-subst .selected-items-div span {
+    display: inline-block;
+    margin: 0.1em 0.5em;
 }
 
 
 /* 
- * The class `active` is add to `multiselector-subst` when selectable items are visible.
+ * `.select-subst` is for the container on which user clicks to display the list of options.
 */
-.multiselector-subst.active .select-subst {
+.multiselector-subst .select-subst {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    overflow-x: hidden;
     background-color: rgb(235, 235, 235);
     user-select: none;
+}
+
+/* 
+ * svg icon
+*/
+.multiselector-subst .select-subst svg{
+    height: 100%;
+    width: 2rem;
+}
+
+
+/* 
+ * The class `active` is add to `multiselector-subst` when selectable items list is visible.
+*/
+.multiselector-subst.active .select-subst svg{
+    transform: rotate(180deg);
 }
 
 
