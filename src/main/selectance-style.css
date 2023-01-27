@@ -28,7 +28,7 @@
     height: var(--multiselector-subst-p-height);
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.2rem;
+    padding: 0 0.2rem 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,6 +39,14 @@
     overflow-x: hidden;
     user-select: none;
     background-color: rgb(235, 235, 235);
+}
+
+.multiselector-subst .select-subst input{
+    flex-grow: 1;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    padding: 0.2rem;
 }
 
 .multiselector-subst .select-subst svg{
@@ -76,7 +84,7 @@
     user-select: none;
     cursor: pointer;
     padding: 0.5rem 0;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -94,4 +102,8 @@
 
 .multiselector-subst li.selected span {
     background-color: blue;
+}
+
+.multiselector-subst li.hidden {
+    display: none !important;
 }
