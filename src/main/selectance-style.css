@@ -36,13 +36,13 @@
     margin: 0;
     cursor: pointer;
     max-width: 100%;
+    width: fit-content;
     overflow-x: hidden;
     user-select: none;
     background-color: rgb(235, 235, 235);
 }
 
 .multiselector-subst .select-subst input{
-    flex-grow: 1;
     height: 100%;
     font-size: 1rem;
     border: none;
@@ -50,8 +50,9 @@
 }
 
 .multiselector-subst .select-subst svg{
-    height: 100%;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
+    margin: 0.1rem 0.5rem;
 }
 
 .multiselector-subst.active .select-subst svg{
