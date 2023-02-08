@@ -31,7 +31,7 @@
     padding: 0 0.2rem 0 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     cursor: pointer;
@@ -60,9 +60,9 @@
 }
 
 .multiselector-subst ul {
+    display: none !important;
     position: absolute !important;
     top: 100%;
-    display: none !important;
     margin: 0;
     list-style: none;
     padding: 0 0.2rem;
@@ -82,13 +82,17 @@
 }
 
 .multiselector-subst li {
+    display: flex !important;
     user-select: none;
     cursor: pointer;
     padding: 0.5rem 0;
-    display: flex !important;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+}
+
+.multiselector-subst li.hidden {
+    display: none !important;
 }
 
 .multiselector-subst li span {
@@ -103,8 +107,4 @@
 
 .multiselector-subst li.selected span {
     background-color: blue;
-}
-
-.multiselector-subst li.hidden {
-    display: none !important;
 }
