@@ -2,7 +2,7 @@
     Selectance works by removing the basic select element and uses other generated elements instead.
     So it can be anoying to customize the style.
 
-    This file helps you to customize multiselectors.
+    Fortunately this file helps you to customize multiselectors.
     Link it to the html after the base css (selectance-style.css) to overwrite 
     the style with yours or use it alone to start from scratch.
 
@@ -35,42 +35,44 @@
 
 
 /* 
- * `.select-subst` is for the container on which user clicks to display the list of options.
+ * `.select-subst` is a div that contains search input 
+ * and the button which opens or closes the list of seletable items.
 */
 .multiselector-subst .select-subst {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 2rem;
-    border: 1px solid black;
-    cursor: pointer;
-    overflow-x: hidden;
-    background-color: rgb(235, 235, 235);
-    user-select: none;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* 
- * svg icon
+ * This input is the one that helps the user search for an option
+*/
+.multiselector-subst .select-subst input{
+
+}
+
+/* 
+ * svg icon to toggle options list display
 */
 .multiselector-subst .select-subst svg{
-    height: 100%;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
+    margin: 0.1rem 0.5rem;
 }
 
-
 /* 
- * The class `active` is add to `multiselector-subst` when selectable items list is visible.
+ * The class `active` is add to `multiselector-subst` when options list is visible.
 */
 .multiselector-subst.active .select-subst svg{
     transform: rotate(180deg);
 }
 
-
 /* 
  * This is the container which contains the list of selectable items.
 */
 .multiselector-subst ul {
-    /* ! Do not overwrite `display`, `position`. */
+    /* ! Do not overwrite : `display`, `position`. */
     display: none;
     position: absolute;
 
@@ -97,16 +99,25 @@
 
 
 /* 
- * The selectable item
+ * Selectable option element
 */
 .multiselector-subst li {
+    /* ! Do not overwrite `display` */
+    display: flex !important;
     user-select: none;
     cursor: pointer;
 }
 
+/* 
+ * The selectable option element when it don't match with the search value
+*/
+.multiselector-subst li.hidden {
+    /* ! Do not overwrite `display` */
+    display: none !important;
+}
 
 /* 
- * The square that change color whether the item is already selected or not. 
+ * The square that change color whether the option is selected or not. 
 */
 .multiselector-subst li span {
     display: inline-block;
@@ -116,7 +127,6 @@
     background-color: white;
     margin-right: 1rem;
 }
-
 
 /* 
  * `selected` is added to `.multiselector-subst li` Element to indicate that this item is already selected.
