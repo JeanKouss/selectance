@@ -19,9 +19,33 @@
     min-width: var(--multiselector-subst-min-width);
 }
 
+.multiselector-subst .instruction {
+    position: relative;
+    color: gray;
+    margin: 0;
+    padding: 0 1em;
+    font-size: 0.9em;
+}
+
 .multiselector-subst .selected-items-div span {
+    position : relative !important;
     display: inline-block;
-    margin: 0.1em 0.5em;
+    margin: 0.1em 0.1em;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 0.1em 1.3em 0.1em 1em;
+}
+
+.multiselector-subst .selected-items-div span.preselected::before, .multiselector-subst .instruction.for-preselected::before {
+    content: "";
+    position: absolute !important;
+    top: 50%;
+    left: 0.5em;
+    transform: translate(-50%, -50%);
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 100%;
+    background-color: gray;
 }
 
 .multiselector-subst .select-subst {
