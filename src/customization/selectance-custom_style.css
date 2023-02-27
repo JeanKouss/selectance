@@ -24,13 +24,42 @@
     position: relative;
 }
 
+/*
+ * For instruction texts
+*/
+.multiselector-subst .instruction {
+    position: relative;
+    color: gray;
+    margin: 0;
+    padding: 0 1em;
+    font-size: 0.9em;
+}
+
 /* 
  * This span elements are the selected options.
  * `selected-items-div` is the container that display the selected elements
 */
 .multiselector-subst .selected-items-div span {
+    position : relative;
     display: inline-block;
     margin: 0.1em 0.5em;
+    padding: 0 0 0 1em;
+}
+
+/*
+ * the class `preselected` is added to the selected options which were 
+ * selected before rendering the form. A small circle is added to tell it to the user
+*/
+.multiselector-subst .selected-items-div span.preselected::before, .multiselector-subst .instruction.for-preselected::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    transform: translate(-50%, -50%);
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 100%;
+    background-color: gray;
 }
 
 

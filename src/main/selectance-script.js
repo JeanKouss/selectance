@@ -21,6 +21,7 @@ class Multiselector {
         this.substitutorDiv = document.createElement("div");
         this.substitutorDiv.classList.add(SUBSTITUTOR_CLASS);
         this.substitutorDiv.insertAdjacentHTML("afterbegin", "<div class='selected-items-div'></div>");
+        this.substitutorDiv.insertAdjacentHTML("beforeend", "<p class='instruction for-preselected'>Preselected</p>");
         this.substitutorInput = document.createElement("input");
         this.substitutorInput.name = this.elementName;
         this.substitutorInput.id = this.elementId;
@@ -62,16 +63,19 @@ class Multiselector {
     }
 
     addSubstitutionOption(value, text, selected=false) {
-        let optionSubstitutor = document.createElement("li");
-        optionSubstitutor.setAttribute("data-value", value);
-        optionSubstitutor.innerHTML = "<span></span>"+text;
-        this.substitutorDiv.querySelector("ul").appendChild(optionSubstitutor);
-        optionSubstitutor.addEventListener("click", (e) => {
+        let optionListItem = document.createElement("li");
+        optionListItem.setAttribute("data-value", value);
+        optionListItem.innerHTML = "<span></span>"+text;
+        this.substitutorDiv.querySelector("ul").appendChild(optionListItem);
+        optionListItem.addEventListener("click", (e) => {
             this.toogleOptionSelection(value, text);
             this.renderChoicesChanges();
         });
         if(selected) {
-            this.selectedOptions[value] = text;
+            this.selectedOptions[value] = {
+                'text' : text, 
+                'preselected' : true
+            };
         }
     }
 
@@ -79,20 +83,23 @@ class Multiselector {
         if(this.selectedOptions.hasOwnProperty(value)) {
             delete this.selectedOptions[value];
         } else {
-            this.selectedOptions[value] = text;
+            this.selectedOptions[value] = {
+                'text' : text, 
+                'preselected' : false
+            };
         }
     }
 
     renderChoicesChanges() {
         let selectedValues = [];
-        let selectedTexts = [];
+        let selectedValuesDatas = [];
         for (let value in this.selectedOptions) {
             if (this.selectedOptions.hasOwnProperty(value)) {
                 selectedValues.push(value);
-                selectedTexts.push(this.selectedOptions[value]);
+                selectedValuesDatas.push(this.selectedOptions[value]);
             }
         }
-        // Updating options class
+        // Updating options list classLists
         for (let li of this.substitutorDiv.querySelectorAll("ul li.selected")) {
             if (selectedValues.indexOf(li.getAttribute("data-value")) == -1) {
                 li.classList.remove("selected");
@@ -103,11 +110,13 @@ class Multiselector {
         }
         // Updating substitutorInput and selectedItemsDiv
         this.substitutorInput.value = selectedValues.join(",");
-        // this.substitutorSelectionDisplayer.textContent = selectedTexts.join(",");
         let selectedItemsDiv = this.substitutorDiv.querySelector(".selected-items-div");
         selectedItemsDiv.innerHTML = "";
-        for (let text of selectedTexts) {
-            selectedItemsDiv.insertAdjacentHTML("beforeend", "<span>"+ text +"</span>");
+        for (let data of selectedValuesDatas) {
+            selectedItemsDiv.insertAdjacentHTML(
+                "beforeend", 
+                `<span class="${data.preselected?"preselected":""}">${data.text}</span>`
+            );
         }
     }
 
