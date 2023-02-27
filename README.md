@@ -1,6 +1,6 @@
 # Selectance
 
-A backend and frontend friendly way to make multiple option selection in your HTML forms. It does nearly the same thing as Select2, Selectize or Choices.js but is build in an easy to use way.
+A backend and frontend friendly way to make multiple option selection in your HTML forms build in an easy to use way.
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)](Status)
 [![GitHub Issues](https://img.shields.io/github/issues/JeanKouss/selectance.svg)](https://github.com/JeanKouss/selectance/issues)
