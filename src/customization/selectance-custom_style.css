@@ -64,10 +64,10 @@
 
 
 /* 
- * `.select-subst` is a div that contains search input 
+ * `.multiselector-subst-selecter` is a div that contains search input 
  * and the button which opens or closes the list of seletable items.
 */
-.multiselector-subst .select-subst {
+.multiselector-subst .multiselector-subst-selecter {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -77,14 +77,14 @@
 /* 
  * This input is the one that helps the user search for an option
 */
-.multiselector-subst .select-subst input{
+.multiselector-subst .multiselector-subst-selecter input{
 
 }
 
 /* 
  * svg icon to toggle options list display
 */
-.multiselector-subst .select-subst svg{
+.multiselector-subst .multiselector-subst-selecter svg{
     height: 1rem;
     width: 1rem;
     margin: 0.1rem 0.5rem;
@@ -93,7 +93,7 @@
 /* 
  * The class `active` is add to `multiselector-subst` when options list is visible.
 */
-.multiselector-subst.active .select-subst svg{
+.multiselector-subst.active .multiselector-subst-selecter svg{
     transform: rotate(180deg);
 }
 

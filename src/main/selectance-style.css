@@ -48,7 +48,7 @@
     background-color: gray;
 }
 
-.multiselector-subst .select-subst {
+.multiselector-subst .multiselector-subst-selecter {
     height: var(--multiselector-subst-p-height);
     border: 1px solid black;
     border-radius: 5px;
@@ -66,20 +66,20 @@
     background-color: rgb(235, 235, 235);
 }
 
-.multiselector-subst .select-subst input{
+.multiselector-subst .multiselector-subst-selecter input{
     height: 100%;
     font-size: 1rem;
     border: none;
     padding: 0.2rem;
 }
 
-.multiselector-subst .select-subst svg{
+.multiselector-subst .multiselector-subst-selecter svg{
     height: 1rem;
     width: 1rem;
     margin: 0.1rem 0.5rem;
 }
 
-.multiselector-subst.active .select-subst svg{
+.multiselector-subst.active .multiselector-subst-selecter svg{
     transform: rotate(180deg);
 }
 
